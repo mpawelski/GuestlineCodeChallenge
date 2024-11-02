@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuestlineCodeChallenge", "GuestlineCodeChallenge\GuestlineCodeChallenge.csproj", "{0E13731D-E6CB-4843-8E99-FC375E78D8B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuestlineCodeChallenge.Core", "GuestlineCodeChallenge.Core\GuestlineCodeChallenge.Core.csproj", "{3D69EC80-DF6E-4146-BE10-277B922D92EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuestlineCodeChallenge.Tests", "GuestlineCodeChallenge.Tests\GuestlineCodeChallenge.Tests.csproj", "{91A385A7-0C4E-49FF-8F89-0CDD5D564E09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E13731D-E6CB-4843-8E99-FC375E78D8B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E13731D-E6CB-4843-8E99-FC375E78D8B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E13731D-E6CB-4843-8E99-FC375E78D8B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E13731D-E6CB-4843-8E99-FC375E78D8B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D69EC80-DF6E-4146-BE10-277B922D92EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D69EC80-DF6E-4146-BE10-277B922D92EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D69EC80-DF6E-4146-BE10-277B922D92EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D69EC80-DF6E-4146-BE10-277B922D92EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91A385A7-0C4E-49FF-8F89-0CDD5D564E09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91A385A7-0C4E-49FF-8F89-0CDD5D564E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91A385A7-0C4E-49FF-8F89-0CDD5D564E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91A385A7-0C4E-49FF-8F89-0CDD5D564E09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
