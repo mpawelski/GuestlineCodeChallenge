@@ -49,7 +49,10 @@ public class SearchCommandHandler : BaseCommandHandler<SearchCommand, SearchComm
             })
             .ToList();
 
-        List<(int availability, DateOnly from, DateOnly? to)> availabilitiesForDateRanges = [];
+        // We have list of availability numbers for each day.
+        // Now we need to recognize when this number is the same for consecutive days.
+
+        List<(int availability, DateOnly from, DateOnly? to)> tmpResult = [];
         var previous = availabilitiesForFutureDays.First();
         (int availability, DateOnly from, DateOnly? to) availabilityForDateRange = (
             previous.availability,
@@ -66,16 +69,16 @@ public class SearchCommandHandler : BaseCommandHandler<SearchCommand, SearchComm
             else
             {
                 // Different availability than previous day. Save the availability for the date range.
-                availabilitiesForDateRanges.Add(availabilityForDateRange);
+                tmpResult.Add(availabilityForDateRange);
                 availabilityForDateRange = (current.availability, current.date, null);
             }
             previous = current;
         }
         // Save last availability for date range
-        availabilitiesForDateRanges.Add(availabilityForDateRange);
+        tmpResult.Add(availabilityForDateRange);
 
         return new SearchCommandResult(
-            availabilitiesForDateRanges
+            tmpResult
                 .Where(x => x.availability > 0)
                 .Select(t => new DateRangeAvailability(new DateRange(t.from, t.to), t.availability))
                 .ToList()

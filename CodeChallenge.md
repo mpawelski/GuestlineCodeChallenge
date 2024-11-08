@@ -153,6 +153,3 @@ Be aware that we will ask detailed questions about both the solution and the pro
 We're really excited to see what you can do!
 
 Please do let us know you've received our test by replying to this email. Good Luck!
-
-Best,
-Paweł Lubarski

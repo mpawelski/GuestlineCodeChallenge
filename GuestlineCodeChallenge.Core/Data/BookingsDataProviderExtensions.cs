@@ -5,7 +5,7 @@ namespace GuestlineCodeChallenge.Core.Data;
 public static class BookingsDataProviderExtensions
 {
     /// <summary>
-    /// Filters list of <see cref="Booking"/> to list of booking which date range intersect with provided range.
+    /// Filters list of <see cref="Booking"/> to list of booking which date range intersect with provided the range.
     /// </summary>
     public static IEnumerable<Booking> FilterBookingsInDateRange(
         this IEnumerable<Booking> bookings,

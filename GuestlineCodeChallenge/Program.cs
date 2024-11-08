@@ -46,7 +46,7 @@ var dataProvider = new InMemoryCacheBookingsDataProvider(jsonFileBookingsDataPro
 var availabilityCommandHandler = new AvailabilityCommandHandler(dataProvider);
 var searchCommandHandler = new SearchCommandHandler(dataProvider, TimeProvider.System);
 
-var bookingsManager = new HotelReservationManager(
+var hotelReservationManager = new HotelReservationManager(
     [availabilityCommandHandler, searchCommandHandler]
 );
 var commandParser = new CommandParser();
@@ -71,7 +71,7 @@ while (true)
     ICommandResult commandResponse;
     try
     {
-        commandResponse = await bookingsManager.ExecuteCommandAsync(command);
+        commandResponse = await hotelReservationManager.ExecuteCommandAsync(command);
     }
     catch (Exception ex)
     {

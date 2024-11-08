@@ -22,7 +22,7 @@ public partial class CommandParser
     /// <summary>
     /// Parses command.
     /// </summary>
-    /// <returns>Returns null if input string is invalid.</returns>
+    /// <returns>Returns command object or null if input string is invalid.</returns>
     public ICommand? Parse(string commandString)
     {
         commandString = WhitespaceRegex().Replace(commandString, "");
