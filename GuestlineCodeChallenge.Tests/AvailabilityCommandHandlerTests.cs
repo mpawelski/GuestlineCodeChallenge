@@ -61,7 +61,7 @@ public class AvailabilityCommandHandlerTests
     }
 
     [Test]
-    public async Task Should_Return_Negative_Rooms_Availability_When_Provided_Date_Range_Is_Range_Of_Overbooked_Rooms()
+    public async Task Should_Return_Negative_Rooms_Availability_When_Provided_Date_Range_Is_In_Range_Of_Overbooked_Rooms()
     {
         // Arrange
         var sut = new AvailabilityCommandHandler(

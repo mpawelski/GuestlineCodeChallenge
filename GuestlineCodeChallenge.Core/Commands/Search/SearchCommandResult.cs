@@ -7,8 +7,8 @@ public record SearchCommandResult(List<DateRangeAvailability> DateRangeAvailabil
 {
     public override string ToString() =>
         string.Join(
-            ",",
-            $"({DateRangeAvailabilities.Select(dra => $"{dra.DateRange}, {dra.Availability}")})"
+            ", ",
+            DateRangeAvailabilities.Select(dra => $"({dra.DateRange}, {dra.Availability})")
         );
 }
 

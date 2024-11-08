@@ -76,6 +76,7 @@ public class SearchCommandHandler : BaseCommandHandler<SearchCommand, SearchComm
 
         return new SearchCommandResult(
             availabilitiesForDateRanges
+                .Where(x => x.availability > 0)
                 .Select(t => new DateRangeAvailability(new DateRange(t.from, t.to), t.availability))
                 .ToList()
         );

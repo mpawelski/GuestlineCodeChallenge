@@ -1,6 +1,6 @@
 ﻿namespace GuestlineCodeChallenge.Tests.TestData;
 
-public class MockTimeProvider(DateTimeOffset utcNow) : TimeProvider
+public class MockTimeProvider(DateOnly date) : TimeProvider
 {
-    public override DateTimeOffset GetUtcNow() => utcNow;
+    public override DateTimeOffset GetUtcNow() => new(date, default, default);
 }
